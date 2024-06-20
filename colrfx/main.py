@@ -3,10 +3,9 @@
 import json
 import os
 
-# Load color data from the JSON file
-package_dir = os.path.dirname(os.path.abspath(__file__))
+path = os.path.dirname(os.path.abspath(__file__))
 
-with open(os.path.join(package_dir, 'colors.json'), "r") as f:
+with open(f"{path}/data.json", "r") as f:
     data = json.load(f)
 
 def main():
