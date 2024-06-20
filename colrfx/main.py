@@ -1,15 +1,16 @@
+# colrfx/main.py
+
 import json
 import os
 
 # Load color data from the JSON file
-
 package_dir = os.path.dirname(os.path.abspath(__file__))
 
-with open(f"{package_dir}/data.json", "r") as f:
+with open(os.path.join(package_dir, 'colors.json'), "r") as f:
     data = json.load(f)
 
 def main():
-    # Lets use while loop to mame;sure that the user enter a text;not submit empty
+    # Lets use while loop to make sure that the user enter a text;not submit empty
     while True:
         color = input("Enter a color name, hex value, or RGB value: ")
         if color:
