@@ -5,7 +5,7 @@ import os
 
 path = os.path.dirname(os.path.abspath(__file__))
 
-with open(f"{path}/data.json", "r") as f:
+with open(f"{path}/colors.json", "r") as f:
     data = json.load(f)
 
 def main():
