@@ -5,7 +5,14 @@ with open('colors.json') as f:
     data = json.load(f)
 
 def main():
-    color = input("Enter the color name, hex value, or rgb() value: ").lower()
+    # Lets use while loop to mame;sure that the user enter a text;not submit empty
+    while True:
+        color = input("Enter a color name, hex value, or RGB value: ")
+        if color:
+            break
+        else:
+            print("Please enter a valid color name, hex value, or RGB value.")
+
     check_type(color)
 
 def check_type(color):
